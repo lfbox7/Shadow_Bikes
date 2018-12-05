@@ -1,0 +1,26 @@
+/* Scss Document */
+/* line 3, ../scss/partials/_base.scss */
+h1 { text-align: center; }
+
+/* line 7, ../scss/partials/_base.scss */
+h3 { text-align: center; }
+
+/* line 11, ../scss/partials/_base.scss */
+#animation_container { background-color: #ffffff; height: 760px; margin-left: auto !important; margin-right: auto !important; width: 1200px; }
+
+/* line 19, ../scss/partials/_base.scss */
+#canvas { display: block; background-color: #ffffff; }
+
+/* line 24, ../scss/partials/_base.scss */
+.dom_overlay_container { pointer-events: none; overflow: hidden; width: 100%; display: block; }
+
+/* line 31, ../scss/partials/_base.scss */
+.hero_image { padding: .5em 0; width: 100%; }
+
+/* line 36, ../scss/partials/_base.scss */
+img.jumbotron-2 { width: 100%; }
+
+/* line 40, ../scss/partials/_base.scss */
+img.jumbotron-4 { width: 100%; }
+
+/*# sourceMappingURL=_base.css.map */

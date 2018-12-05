@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAmB",
+"sources": ["../scss/partials/_colors.scss"],
+"names": [],
+"file": "_colors.css"
+}

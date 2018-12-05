@@ -1,0 +1,41 @@
+/* Scss Document */
+
+footer {
+    background: $dark_color;
+    ul {
+        display: block;
+        list-style-type: none;
+        margin: 5em 0 0 5em;
+        text-decoration: none;
+        li {
+            color: $secondary_color;
+            font-size: 1em;
+            font-weight: 200;
+            a {
+                color: $secondary_color;
+            }
+        }
+        li.list-title {
+            font-weight: bold;
+        }
+    }
+}
+
+.address-text {
+    color: $secondary_color;
+    font-size: 1em;
+    font-weight: 200;
+    margin-top: 5em;
+    text-align: center;
+}
+
+.map-size {
+    margin-left: 2em;
+    padding: 2em 0;
+    width: 15em;
+}
+
+.social-icon {
+    margin-bottom: 2em;
+    width: 3em;
+}
