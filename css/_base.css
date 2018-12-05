@@ -6,21 +6,34 @@ h1 { text-align: center; }
 h3 { text-align: center; }
 
 /* line 11, ../scss/partials/_base.scss */
-#animation_container { background-color: #ffffff; height: 760px; margin-left: auto !important; margin-right: auto !important; width: 1200px; }
+#animation_container { background-color: #ffffff; height: 60vh; margin-left: auto !important; margin-right: auto !important; padding-bottom: 1em; width: 100%; }
 
-/* line 19, ../scss/partials/_base.scss */
+/* line 20, ../scss/partials/_base.scss */
 #canvas { display: block; background-color: #ffffff; }
 
-/* line 24, ../scss/partials/_base.scss */
+/* line 25, ../scss/partials/_base.scss */
 .dom_overlay_container { pointer-events: none; overflow: hidden; width: 100%; display: block; }
 
-/* line 31, ../scss/partials/_base.scss */
+/* line 32, ../scss/partials/_base.scss */
 .hero_image { padding: .5em 0; width: 100%; }
 
-/* line 36, ../scss/partials/_base.scss */
-img.jumbotron-2 { width: 100%; }
+/* line 37, ../scss/partials/_base.scss */
+.jumbotron-1 { background-position: center; background-repeat: no-repeat; background-size: cover; }
+/* line 41, ../scss/partials/_base.scss */
+.jumbotron-1 h1 { display: block; margin: 0 auto; }
+/* line 45, ../scss/partials/_base.scss */
+.jumbotron-1 p { display: block; margin: 0 auto; }
+/* line 49, ../scss/partials/_base.scss */
+.jumbotron-1 .btn { display: block; margin: 0 auto; }
 
-/* line 40, ../scss/partials/_base.scss */
-img.jumbotron-4 { width: 100%; }
+/* line 55, ../scss/partials/_base.scss */
+.jumbotron-2 { background-position: center; background-repeat: no-repeat; background-size: cover; }
+/* line 59, ../scss/partials/_base.scss */
+.jumbotron-2 h4 { color: #f3f5f4; display: block; margin: 0 auto; text-align: center; }
+/* line 65, ../scss/partials/_base.scss */
+.jumbotron-2 .btn { display: block; margin: 0 auto; }
+
+/* line 71, ../scss/partials/_base.scss */
+.jumbotron-4 { background-position: center; background-repeat: no-repeat; background-size: cover; }
 
 /*# sourceMappingURL=_base.css.map */

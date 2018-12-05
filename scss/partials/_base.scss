@@ -10,10 +10,11 @@ h3 {
 
 #animation_container {
 	background-color: #ffffff; 
-	height: 760px; 
+	height: 60vh; 
 	margin-left: auto !important; 
 	margin-right: auto !important;
-	width: 1200px;
+    padding-bottom: 1em;
+	width: 100%;
 }
 
 #canvas {
@@ -33,10 +34,42 @@ h3 {
 	width: 100%;
 }
 
-img.jumbotron-2 {
-    width:100%;
+.jumbotron-1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        display: block;
+        margin: 0 auto;
+    }
+    p{
+        display: block;
+        margin: 0 auto;       
+    }
+    .btn {
+        display: block;
+        margin: 0 auto;
+    }    
 }
 
-img.jumbotron-4 {
-    width: 100%;
+.jumbotron-2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h4 {
+        color: #f3f5f4;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.jumbotron-4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

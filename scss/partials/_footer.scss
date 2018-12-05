@@ -1,18 +1,22 @@
 /* Scss Document */
 
 footer {
-    background: $dark_color;
+    background: #343a40;
+    .col-md-3 {
+        background: #343a40;
+    }
     ul {
         display: block;
         list-style-type: none;
-        margin: 5em 0 0 5em;
+        margin: 3em auto;
+        padding-bottom: 2em;
         text-decoration: none;
         li {
-            color: $secondary_color;
+            color: #f3f5f4;
             font-size: 1em;
             font-weight: 200;
             a {
-                color: $secondary_color;
+                color: #f3f5f4;
             }
         }
         li.list-title {
@@ -22,7 +26,7 @@ footer {
 }
 
 .address-text {
-    color: $secondary_color;
+    color: #f3f5f4;
     font-size: 1em;
     font-weight: 200;
     margin-top: 5em;
@@ -30,12 +34,11 @@ footer {
 }
 
 .map-size {
-    margin-left: 2em;
     padding: 2em 0;
     width: 15em;
 }
 
 .social-icon {
-    margin-bottom: 2em;
+    padding-bottom: 4em;
     width: 3em;
 }

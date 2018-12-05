@@ -21,9 +21,14 @@
 						<span style="color: #000000;">Welcome, <?php
 							if ( isset ( $_SESSION ))
 							{
-								echo $_SESSION [ 'MyFirstName' ];
+								$ID = $_GET['ID'];
+                                $FirstName = $_GET['FirstName'];
+                                $Result = mysqli_query("SELECT $FirstName FROM `User1_Information` WHERE `ID` = '$ID' ");
+                                $Row = mysqli_fetch_array($Result);
+                                $_SESSION['FirstName'] = $Row[$FirstName];
+                                echo $_SESSION['FirstName'];
 							} else {
-								echo 'Sign In';
+								echo '<a href="ShadowGroup.php">Sign In</a>';
 							}
 							?>
 						</span>
@@ -74,7 +79,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-10 offset-1">
+                    <div class="col-2"></div>
+					<div class="col-10">
 						
 						<!-- Script moved to custom.js -->
 
@@ -197,13 +203,128 @@
 													</ul>													
 												</div>
 												<div class="col-3">
-													<span><img src="/images/tour_de_france.jpg" alt="Tour de France"></span>
+													<span><img src="./images/tour_de_france.jpg" alt="Tour de France"></span>
 												</div>
 											</div>
 										</div>
 									</li>
+			        				    <li class="nav-item dropdown"> 
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mountain</a> <!--
+										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
+											<div class="row">
+												<div class="col-3">
+													<h2 class="dropdown-title"><a href="#" class="dropdown-title">Cannondale</a></h2>
+													<ul>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Synapse</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Synapse Alloy</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Elite</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">System Six</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Super Six EVO</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CAAD12</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CAAD Optimo</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Gravel/All-Road</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Topstone</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Slate</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">SE Collection</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Cyclocross</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">SuperX</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CAADX</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">TT and Tri</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">SuperSlice</a></li>
+															</ul>
+														</li>														
+													</ul>
+												</div>
+												<div class="col-3">
+													<h2 class="dropdown-title"><a href="#" class="dropdown-title">Specialized</a></h2>
+													<ul>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Roubaix</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Ruby</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Dolce</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Elite</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Venge</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Tarmac</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Allez</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Gravel/All-Road</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Diverge</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">AWOL</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Sequoia</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Cyclocross</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CruX</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">TT and Tri</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Shiv</a></li>
+															</ul>
+														</li>														
+													</ul>													
+												</div>
+												<div class="col-3">
+													<h2 class="dropdown-title"><a href="#" class="dropdown-title">Trek</a></h2>
+													<ul>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Domane</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Elite</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Madone</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Émonda</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Gravel/All-Road</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Checkpoint</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Cyclocross</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Boone</a></li>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Crockett</a></li>
+															</ul>
+														</li>
+														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">TT and Tri</a>
+															<ul>
+																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Speed Concept</a></li>
+															</ul>
+														</li>														
+													</ul>													
+												</div>
+												<div class="col-3">
+													<img src="./images/tour_de_france.jpg" alt="Tour de France">
+												</div>
+											</div>
+										</div>
+									</li> -->
 									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mountain</a>
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Urban</a> <!--
 										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
 											<div class="row">
 												<div class="col-3">
@@ -316,9 +437,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
+									</li> -->
 									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Urban</a>
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Electric</a> <!--
 										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
 											<div class="row">
 												<div class="col-3">
@@ -431,9 +552,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
+									</li> -->
 									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Electric</a>
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Women's</a> <!--
 										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
 											<div class="row">
 												<div class="col-3">
@@ -546,9 +667,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
+									</li> -->
 									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Women's</a>
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kid's</a> <!--
 										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
 											<div class="row">
 												<div class="col-3">
@@ -661,9 +782,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
+									</li> -->
 									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kid's</a>
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GEAR</a> <!--
 										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
 											<div class="row">
 												<div class="col-3">
@@ -772,13 +893,13 @@
 													</ul>													
 												</div>
 												<div class="col-3">
-													<img src="/images/tour_de_france.jpg" alt="Tour de France">
+													<img src="./images/tour_de_france.jpg" alt="Tour de France">
 												</div>
 											</div>
 										</div>
-									</li>
+									</li> -->
 									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GEAR</a>
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parts</a> <!--
 										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
 											<div class="row">
 												<div class="col-3">
@@ -887,130 +1008,16 @@
 													</ul>													
 												</div>
 												<div class="col-3">
-													<img src="/images/tour_de_france.jpg" alt="Tour de France">
+													<img src="./images/tour_de_france.jpg" alt="Tour de France">
 												</div>
 											</div>
 										</div>
-									</li>
-									<li class="nav-item dropdown"> 
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parts</a>
-										<div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown1" id="roadModal">
-											<div class="row">
-												<div class="col-3">
-													<h2 class="dropdown-title"><a href="#" class="dropdown-title">Cannondale</a></h2>
-													<ul>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Synapse</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Synapse Alloy</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Elite</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">System Six</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Super Six EVO</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CAAD12</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CAAD Optimo</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Gravel/All-Road</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Topstone</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Slate</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">SE Collection</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Cyclocross</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">SuperX</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CAADX</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">TT and Tri</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">SuperSlice</a></li>
-															</ul>
-														</li>														
-													</ul>
-												</div>
-												<div class="col-3">
-													<h2 class="dropdown-title"><a href="#" class="dropdown-title">Specialized</a></h2>
-													<ul>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Roubaix</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Ruby</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Dolce</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Elite</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Venge</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Tarmac</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Allez</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Gravel/All-Road</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Diverge</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">AWOL</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Sequoia</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Cyclocross</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">CruX</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">TT and Tri</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Shiv</a></li>
-															</ul>
-														</li>														
-													</ul>													
-												</div>
-												<div class="col-3">
-													<h2 class="dropdown-title"><a href="#" class="dropdown-title">Trek</a></h2>
-													<ul>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Domane</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Elite</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Madone</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Émonda</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Gravel/All-Road</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Checkpoint</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Cyclocross</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Boone</a></li>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Crockett</a></li>
-															</ul>
-														</li>
-														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">TT and Tri</a>
-															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Speed Concept</a></li>
-															</ul>
-														</li>														
-													</ul>													
-												</div>
-												<div class="col-3">
-													<img src="/images/tour_de_france.jpg" alt="Tour de France">
-												</div>
-											</div>
-										</div>
-									</li>
+									</li> -->
 								</ul>
 							</div>
 						</nav>
 					</div>
+                    <div class="col-2"></div>
 				</div>
 				<hr>
 			</div>

@@ -44,7 +44,7 @@
 								$City = mysqli_real_escape_string ( $DBConnect, $City );
 								$State = mysqli_real_escape_string ( $DBConnect, $State );
 								
-								$TableName = "User_Information";
+								$TableName = "User1_Information";
 								$SQLString="INSERT INTO $TableName ( FirstName, LastName, StreetAddress, City, State, ZipCode, PhoneNumber ) VALUES ( '$FirstName', '$LastName', '$StreetAddress', '$City', '$State', '$ZipCode', '$PhoneNumber' )";
 								if ( mysqli_query ( $DBConnect, $SQLString )) 
 								{

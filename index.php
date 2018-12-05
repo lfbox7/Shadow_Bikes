@@ -104,46 +104,42 @@ function handleComplete(evt,comp) {
 		</div>
         <div class="container-fluid">
             <div class="row">
-                <div class="jumbotron col" style="background-image: url('images/habit_hero.jpg'); background-size: cover; height: 75vh;">
-                    <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
+                <div class="jumbotron col-sm-12 jumbotron-1" style="background-image: url('images/habit_hero.jpg');">
+                    <div class="col-md-4 offset-md-8">
+                        <h1 class="display-4">Introducing Your New Habit!</h1>
+                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
 			<div class="row">
-                <div class="jumbotron col-md-6">
-                    <h1 class="display-4">Hello, world!</h1>
-                    <img class="jumbotron-2" src="/images/stumpjumper_hero.jpg" alt="Stump Jumper">
-                    <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
+                <div class="jumbotron col-md-6 jumbotron-2" style="background-image: url('images/stumpjumper_hero.jpg');">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-8">
+                            <h4 class="display-4">The New Specialized Stumpjumper!</h4>
+                            <p class="lead"> <a class="btn btn-light btn-sm" href="#" role="button">Learn more</a> </p>                    
+                        </div>
+                    </div>
                 </div>
-                <div class="jumbotron col-md-6">
-                     <h1 class="display-4">Hello, world!</h1>
-                    <img class="jumbotron-2" src="/images/stumpjumper_hero.jpg" alt="Stump Jumper">
-                    <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
+                <div class="jumbotron col-md-6 jumbotron-2" style="background-image: url('images/powerfly_hero.jpg');">
+                    <div class="col-md-4">
+                        <h4 class="display-4">The New Trek Powerfly!</h4>
+                        <p class="lead"> <a class="btn btn-light btn-sm" href="#" role="button">Learn more</a> </p>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
-			<div class="row">
-                <div class="jumbotron col-md-6 col-lg-3">
-                    <img class="jumbotron-4" src="/images/trail_slide.jpg" alt="Slide">
-                </div>
-                <div class="jumbotron col-md-6 col-lg-3">
-                    <img class="jumbotron-4" src="/images/trail_woman.jpg" alt="Trail Riding">
-                </div>             
-                <div class="jumbotron col-md-6 col-lg-3">
-                    <img class="jumbotron-4" src="/images/trail_jumps.jpg" alt="Jumpers">
-                </div> 
-                <div class="jumbotron col-md-6 col-lg-3">
-                    <img class="jumbotron-4" src="/images/trail_woman.jpg" alt="Woman Trail Rider">
-                </div>                    
+			<div class="row" style=" height: 25em !important;">
+                <div class="jumbotron col-md-6 col-lg-3 jumbotron-4" style="background-image: url('images/trail_slide.jpg');"></div>
+                <div class="jumbotron col-md-6 col-lg-3 jumbotron-4" style="background-image: url('images/trail_woman.jpg');"></div>             
+                <div class="jumbotron col-md-6 col-lg-3 jumbotron-4" style="background-image: url('images/trail_jumps copy.jpg');"></div> 
+                <div class="jumbotron col-md-6 col-lg-3 jumbotron-4" style="background-image: url('images/trail_riding.jpg');"></div>                    
 			</div>
         </div>
         <?php require('footer.php'); ?>
+        <script src="js/custom-1.0.0.js" type="text/javascript"></script>
 		<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
     	<script src="vendor/bootstrap-4.1.3/js/popper.min.js" type="text/javascript"></script>
     	<script src="vendor/bootstrap-4.1.3/js/bootstrap-4.0.0.js" type="text/javascript"></script>

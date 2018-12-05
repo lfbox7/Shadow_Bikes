@@ -33,6 +33,4 @@ if ( $Rows == 1 )
     $_SESSION [ 'LoginFail' ] = "True";
     header ( "location:ShadowGroup.php" );
 }
-
-mysqli_close ( $DBConnect );
 ?>

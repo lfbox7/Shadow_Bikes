@@ -55,7 +55,7 @@ $QueryResult = mysqli_query ( $DBConnect, $SQLString );
 if ( @mysqli_num_rows ( $QueryResult ) > 0 )
 {
 } else {
-    $SQLString = "CREATE TABLE $TableName ( ID INT(7) NOT NULL AUTO_INCREMENT PRIMARY KEY, Email VARCHAR(20) NOT NULL, Password VARCHAR(32)) NOT NULL";
+    $SQLString = "CREATE TABLE $TableName ( ID INT(7) NOT NULL AUTO_INCREMENT PRIMARY KEY, Email VARCHAR(20) NOT NULL, Password VARCHAR(32) NOT NULL)";
     if ( mysqli_query ( $DBConnect, $SQLString ))
 	{
         echo '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">Successfully created the ' . $TableName . ' table.</h4></div></div></div>';	
