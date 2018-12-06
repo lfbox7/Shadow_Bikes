@@ -102,7 +102,7 @@
 													<ul>
 														<li class="dropdown-subheader"><a href="#" class="dropdown-subheader">Endurance</a>
 															<ul>
-																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Synapse</a></li>
+																<li class="dropdown-item1"><a href="BicycleSales.php" class="dropdown-item1">Synapse</a></li>
 																<li class="dropdown-item1"><a href="#" class="dropdown-item1">Synapse Alloy</a></li>
 															</ul>
 														</li>
