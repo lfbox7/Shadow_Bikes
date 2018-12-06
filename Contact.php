@@ -1,3 +1,15 @@
+<?php
+$Host = "localhost"; 
+$UserName = "ShadowBikes";
+$Password = "Shadow#Bikes.";
+$DBName = "Shadow_Bikes";
+$DBConnect = mysqli_connect ( "$Host", "$UserName", "$Password", "$DBName" ) or die ( '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">Connection error: ' . $DBConnect -> connect_error . '.<br>Please try again.</h4></div></div></div>' );
+
+if ( mysqli_connect_errno ())
+{
+    echo '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">Connection error: ' . $DBConnect -> connect_error . '.<br>Please try again.</h4></div></div></div>';
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +25,27 @@
     </head>
     <body>
         <?php require('header.php'); ?>
-						<form action="AddUser.php" class="float-label" method="post" name="Register" spellcheck="false">
+                        <?php
+                        if ( isset ( $_POST ['Submit'] )) {
+                            $_SESSION [ 'Email' ] = $Email;
+                            $_SESSION [ 'Message' ] = $Message;
+                            $Email = $_POST [ 'Email' ];
+                            $Message = $_POST [ 'Message' ];
+                            $Email = mysqli_real_escape_string ( $DBConnect, $Email );
+                            $Message = mysqli_real_escape_string ( $DBConnect, $Message );
+                            $Email = mysqli_real_escape_string ( $DBConnect, $Email );
+                            $Message = mysqli_real_escape_string ( $DBConnect, $Message );
+                            $TableName = "Contact_Table";
+                            $SQLString="INSERT INTO $TableName ( Email, Message) VALUES ( '$Email', '$Message' )";
+                            if ( mysqli_query ( $DBConnect, $SQLString )) 
+				            {
+                                echo '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">New record created successfully.</h4></div></div></div>';
+				            } else {
+                                echo '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">Error: ' . $SQLString . '<br>' . mysqli_error ( $DBConnect ) . '.</h4></div></div></div>';
+				            }
+                        }
+                        ?>
+						<form action="index.php" class="float-label" method="post" name="Register" spellcheck="false">
 							<div class="row">
 								<div class="col-8 offset-2">
 									<div class="form-group">
@@ -37,7 +69,7 @@
 												<span class="required-indicator">*</span>											
 											
 										</div>		
-										<button type="submit" class="btn btn-primary" id="Register" name="Register">Submit Message</button>	   
+										<button type="submit" class="btn btn-primary" id="Submit" name="Submit">Submit Message</button>	   
 									</div>
 							  </div>
 						  </div>

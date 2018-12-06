@@ -21,7 +21,7 @@ $ItemQty = ( int ) $ItemQty;
 
 $TableName = "Cannondale_Inventory";
 $Column = "QTY_In_Stock";
-$SQLString = "SELECT QTY FROM $TableName WHERE ID = $ItemId";
+$SQLString = "SELECT $Column FROM $TableName WHERE ID = $ItemId";
 if ( $QueryResult = mysqli_query ( $DBConnect, $SQLString ));
 {
     while ( $Row = mysqli_fetch_array ( $QueryResult ))
@@ -29,7 +29,7 @@ if ( $QueryResult = mysqli_query ( $DBConnect, $SQLString ));
         $Item = $Row [ $Column ];
         $NewQty = $Item + $ItemQty;
     }
-    $SQLString = "UPDATE $TableName SET QTY_In_Stock = $NewQty WHERE ID = $ItemId";
+    $SQLString = "UPDATE $TableName SET $Column = $NewQty WHERE ID = $ItemId";
     if ( mysqli_query ( $DBConnect, $SQLString )) 
     {
         echo '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">Inventory Updated.</h4></div></div></div>';
