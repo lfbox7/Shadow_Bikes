@@ -33,41 +33,21 @@ if ( mysqli_connect_errno ())
                 </div>
             </div>
 			<div class="row">
-				<div class="col-12">
 					<form action="" method="post" name="CannondalesForSale">
-                		<div class="form-group">
-                		    <div class="row">
-                		        <div class="col-1">
-                		            <h6>ID</h6>
-                		        </div>								
-                		        <div class="col-2">
-                		            <h6>Image</h6>
-                		        </div>						
-                		        <div class="col-1">
-                		            <h6>Type</h6>
-                		        </div>
-                		        <div class="col-1">
-                		            <h6>Model</h6>
-                		        </div>
-                		        <div class="col-1">
-                		            <h6>Version</h6>
-                		        </div>
-                		        <div class="col-1">
-                		            <h6>Frame Size</h6>
-                		        </div>						
-                		        <div class="col-1">
-                		            <h6>Wheel Size</h6>
-                		        </div>
-                		        <div class="col-2">
-                		            <h6>Description</h6>
-                		        </div>	
-                		        <div class="col-1">
-                		            <h6>Price</h6>
-                		        </div>
-                		        <div class="col-1">
-                		            <h6>Quantity</h6>
-                		        </div>						
-                		    </div>
+                		<div class="form-group inventory">
+                		    <table class="inventory">
+                		        <tr>
+                		            <th>ID</th>
+                		            <th>Image</th>
+                		            <th>Type</th>
+                		            <th>Model</th>
+                		            <th>Version</th>
+                		            <th>Frame Size</th>
+                		            <th>Wheel Size</th>
+                		            <th>Description</th>
+                		            <th>Price</th>
+                		            <th>Quantity</th>
+                		        </tr>						
                     		<?php
 								$TableName = "Cannondale_Inventory";
 								$Item = "Bicycle_Type";
@@ -87,12 +67,12 @@ if ( mysqli_connect_errno ())
 									$ItemPrice = $Row [ 'Retail_Price' ];
 									$ItemQuantity = $Row [ 'QTY_In_Stock' ];
 									
-									echo "<div class=\"row\"><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemID</p></div><div class=\"col-2\"><img src=\"$ItemImage\" alt=\"$ItemModel\">$ItemId</p></div><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemType</p></div><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemVersion</p></div><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemFrameSize</p></div><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemWheelSize</p></div><div class=\"col-2\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemDescription</p></div><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemPrice</p></div><div class=\"col-1\"><p style=\"font-size: .75em !important; text-align: center;\">$ItemQuantity</p></div></div>";
+									echo "<tr><td>$ItemID</td><td><img src=$ItemImage alt=$ItemModel></td><td>$ItemType</td><td>$ItemModel</td><td>$ItemVersion</td><td>$ItemFrameSize</td><td>$ItemWheelSize</td><td>$ItemDescription</td><td>$ItemPrice</td><td>$ItemQuantity</td></tr>";
 								}
 							?>
+                            </table>
 						</div>
 					</form>
-				</div>
 			</div>
             <div class="row">
 				<hr>
@@ -100,7 +80,7 @@ if ( mysqli_connect_errno ())
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     <form action="AddCannondaleInventory.php" method="post" name="AddInventory">
                         <hr>
                         <label for="AddInventory">Add Inventory</label>
@@ -118,7 +98,7 @@ if ( mysqli_connect_errno ())
                       <input class="btn btn-primary" style="font-size: .75em;" type="submit" name="Submit" value="Add Inventory">
                     </form>
                 </div>
-                <div class="col-4">				
+                <div class="col-md-4">				
                     <form action="UpdateCannondaleInventory.php" method="post" name="UpdateInventory">
                         <hr>
                         <label for="UpdateInventory">Update Inventory</label>
@@ -127,7 +107,7 @@ if ( mysqli_connect_errno ())
                         <hr>
                         <div class="form-group">
                             <label style="font-size: .75em;" for="Image">Image</label>
-							<input id="Image" name="Image" type="file">
+							<input id="Image" name="Image" type="text">
                         </div>  						
                         <div class="form-group">
                             <label style="font-size: .75em;" for="Type">Type</label>
@@ -164,7 +144,7 @@ if ( mysqli_connect_errno ())
                       <input class="btn btn-primary" style="font-size: .75em;" type="submit" name="Submit" value="Update Inventory">
                     </form>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <form action="RemoveCannondaleInventory.php" method="post" name="RemoveInventory">
                         <hr>
                         <label for="RemoveInventory">Remove Inventory</label>

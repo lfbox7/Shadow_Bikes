@@ -73,3 +73,34 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+.inventory {
+    display: block;
+    margin: 0 auto;
+    table {
+        th {
+            border: 1px solid;
+            font-size: 1em;
+            text-align: center;
+            margin: 0 .5em;
+        }
+        td {
+            border: 1px solid;
+            font-size: .75em;
+            text-align: center;
+            img {
+                max-width: 2em !important;
+            }
+        }
+    }
+}
+
+.card-sales {
+    .card-header {
+        font-size: 2em;
+    }
+    .card-image {
+        max-width: 20em;
+    }
+}

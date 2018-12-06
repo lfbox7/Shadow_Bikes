@@ -11,9 +11,8 @@
         <link href="css/main.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.typekit.net/hia7juf.css">
     </head>
-    
     <body>
-	<?php require('header.php'); ?>
+        <?php require('header.php'); ?>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-6 offset-4">
@@ -178,9 +177,10 @@
 				</div>
 			</div>
 		</div>
-        <?php require('footer.php'); ?>	
+        <?php require('footer.php'); ?>
+		<script src="js/custom-1.0.0.js" type="text/javascript"></script>
 		<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
     	<script src="vendor/bootstrap-4.1.3/js/popper.min.js" type="text/javascript"></script>
-    	<script src="vendor/bootstrap-4.1.3/js/bootstrap-4.0.0.js" type="text/javascript"></script>      	
+    	<script src="vendor/bootstrap-4.1.3/js/bootstrap-4.0.0.js" type="text/javascript"></script>
     </body>
 </html>

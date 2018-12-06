@@ -61,7 +61,7 @@ if ( @mysqli_num_rows ( $QueryResult ) > 0 )
         echo '<div class="container"><div class="row"><div class="col-12"><h4 style="color: #ff0000; font-size: 1.5em; font-weight: 400; text-align: center;">Successfully created the ' . $TableName . ' table.</h4></div></div></div>';	
 	}	
 }
-$TableName = "User_Information";
+$TableName = "User1_Information";
 $SQLString = "SELECT * FROM $TableName";
 $QueryResult = mysqli_query ( $DBConnect, $SQLString );
 if ( @mysqli_num_rows ( $QueryResult ) > 0 )

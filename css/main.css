@@ -232,6 +232,20 @@ h3 { text-align: center; }
 /* line 71, ../scss/partials/_base.scss */
 .jumbotron-4 { background-position: center; background-repeat: no-repeat; background-size: cover; }
 
+/* line 78, ../scss/partials/_base.scss */
+.inventory { display: block; margin: 0 auto; }
+/* line 82, ../scss/partials/_base.scss */
+.inventory table th { border: 1px solid; font-size: 1em; text-align: center; margin: 0 .5em; }
+/* line 88, ../scss/partials/_base.scss */
+.inventory table td { border: 1px solid; font-size: .75em; text-align: center; }
+/* line 92, ../scss/partials/_base.scss */
+.inventory table td img { max-width: 2em !important; }
+
+/* line 100, ../scss/partials/_base.scss */
+.card-sales .card-header { font-size: 2em; }
+/* line 103, ../scss/partials/_base.scss */
+.card-sales .card-image { max-width: 20em; }
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

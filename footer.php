@@ -30,7 +30,7 @@
                             <li class="list-title">SUPPORT</li>
                             <li><a href="#">Customer Service</a></li>
                             <li><a href="#">Bike Sizing and Fit Guides</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="Contact.php">Contact Us</a></li>
                             <li><a href="#">Newletter Sign</a></li>
                             <li><a href="#">Suspension Calculator</a></li>
                         </ul>

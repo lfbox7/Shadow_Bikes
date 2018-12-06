@@ -7,13 +7,11 @@
         <title>Shadow Blog</title>
         <meta name="author" content="Leonard Box">
         <meta name="description" content="">
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <link href="css/bootstrap-4.0.0.css" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<header>
-			<!-- header content -->
-		</header>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.typekit.net/hia7juf.css">
+    </head>
+    <body>
+        <?php require('header.php'); ?>
 		<div class="container-fluid">
 			
 			<?php
@@ -33,12 +31,10 @@
 			}
 			?>
 		</div>
-		<footer>
-			<!-- footer content here -->
-		</footer>
+        <?php require('footer.php'); ?>
 		<script src="js/custom-1.0.0.js" type="text/javascript"></script>
-		<script src="js/poo.js" type="text/javascript"></script>
-   	 	<script src="vendor/bootstrap-4.1.3/js/popper.min.js" type="text/javascript"></script>
+		<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    	<script src="vendor/bootstrap-4.1.3/js/popper.min.js" type="text/javascript"></script>
     	<script src="vendor/bootstrap-4.1.3/js/bootstrap-4.0.0.js" type="text/javascript"></script>
-	</body>
+    </body>
 </html>
